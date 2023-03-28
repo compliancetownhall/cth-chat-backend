@@ -27,9 +27,6 @@ app.use(express.json());
 //   const chat = chats.filter((chat) => chat._id === req.params.id);
 //   res.send(chat);
 // });
-app.get("/_healthz",(req,res)=>{
-  res.send({status:"success",message:"server is up"});
-})
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/message", messageRoutes);

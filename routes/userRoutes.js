@@ -9,6 +9,10 @@ const {
 
 const router = express.Router();
 
+
+router.get("/_healthz",(req,res)=>{
+  res.send({status:"success",message:"server is up"});
+})
 router.route("/").post(registerUser).get(authorize, allUsers);
 router.post("/login", authUser);
 
